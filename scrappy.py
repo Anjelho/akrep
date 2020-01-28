@@ -3,15 +3,14 @@ from bs4 import BeautifulSoup
 import json
 import pandas as pd
 '''
-This script will scrap all sub-categories from trustpilot and will 
-order the TOP-Magazines for each category by filtering on 
+This script will scrap all sub-categories from trustpilot and will
+order the TOP-Magazines for each category by filtering on
 500+ reviews rating & under 18 Months
 
 '''
 
 url= "https://uk.trustpilot.com/categories"
 mainurl= "https://uk.trustpilot.com"
-testurl = 'https://uk.trustpilot.com/review/sleafordvets.co.uk'
 file = 'import.csv'
 
 r = requests.get(url)
@@ -89,9 +88,3 @@ for i in soup.findAll('div', {"class":"subCategory___BRUDy" }):
             shops['AddressCountry'] = dat['address']['addressCountry']
 
             f.write(str(shops)+'|')
-
-
-
-
-
-
