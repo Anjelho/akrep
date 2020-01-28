@@ -11,7 +11,7 @@ order the TOP-Magazines for each category by filtering on
 
 url= "https://uk.trustpilot.com/categories"
 mainurl= "https://uk.trustpilot.com"
-file = 'import.csv'
+file = 'resources/import.csv'
 
 r = requests.get(url)
 f = open(file, 'w', encoding="utf-8")
